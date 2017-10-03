@@ -221,112 +221,7 @@ a
 			&:hover
 				background: #fff
 				color: #000
-.headerV1
-	overflow: hidden
-	padding-top: 60px
-	padding-bottom: 160px
-	background: transparent url('../img/header-bg1.png') center no-repeat
-	background-size: cover
-	position: relative
-	&-bg2
-		background: transparent url('../img/header-bg2.png') center no-repeat
-		background-size: cover
-	&-bg3
-		background: transparent url('../img/header-bg3.png') center no-repeat
-		background-size: cover
-	&-bg4
-		background: transparent url('../img/header-bg4.png') center no-repeat
-		background-size: cover
-	&-bg12
-		background: transparent url('../img/header-bg12.png') center no-repeat
-		background-size: cover
-	&-bg
-		content: ''
-		display: block
-		position: absolute
-		left: 0
-		top: 0
-		width: 100%
-		height: 100%
-		background: transparent url('../img/header-bg1-1.png') center no-repeat
-		background-size: cover
-		&2-2
-			background: transparent url('../img/header-bg2-2.png') center no-repeat
-			background-size: cover
-		&4-2
-			background: transparent url('../img/header-bg4-2.png') center no-repeat
-			background-size: cover
-		&12-2
-			background: transparent url('../img/header-bg12-2.png') center no-repeat
-			background-size: cover
-	&__text
-		font-family: 'Lora', serif
-		font-size: 28px
-		color: #fff
-		text-align: center
-		margin: 125px 0 0 0
-	&__header
-		font-family: 'Lato', sans-serif
-		font-size: 260px
-		font-weight: 900
-		color: #fff
-		text-align: center
-		margin: 0
-	& .header__button
-		position: relative
-		z-index: 99999
-		display: inline-block
-		margin: 90px 0 0 0
-		padding: 0 30px
-		&-v3
-			margin-top: 40px
-.headerV2
-	overflow: hidden
-	background: #f6f6f6
-	padding-top: 60px
-	padding-bottom: 90px
-	.header__logo
-		color: #1b161a
-	.header__link
-		color: #74767f
-		transition: color .2s
-		&:hover
-			color: #5f6be8
-	&__header
-		font-family: 'Lora', serif
-		font-size: 60px
-		color: #2A2C2F
-		max-width: 835px
-		margin: 165px 0 0 0
-		a
-			color: #666A70
-			text-decoration: none
-			transition: color .2s
-			&:hover
-				color: #5f6be8
-	&__link
-		font-family: 'Lato', sans-serif
-		font-size: 18px
-		color: #60626c
-		display: inline-block
-		margin-top: 100px
-		text-decoration: none
-		transition: color .2s
-		&:hover
-			color: #5f6be8
-	&-dark
-		background: #19191b
-		.header__logo, .headerV2__header
-			color: #fff
-		.header__link, .headerV2__link
-			color: #fff
-			&:hover
-				color: #ffcd44
-		.headerV2__header a
-			color: #ffcd44
-			transition: color .2s
-			&:hover
-				color: #5f6be8
+
 .headerV3
 	overflow: hidden
 	background: #000000
@@ -339,7 +234,7 @@ a
 		background: transparent url('../img/IMG_20170808_100748.jpg') center no-repeat
 		background-size: cover
 	&__item:nth-of-type(3)
-		background: transparent url('../img/header-bg7.png') center no-repeat
+		background: transparent url('../img/IMG_20170808_102506.jpg') center no-repeat
 		background-size: cover
 	&__desc
 		font-family: 'Lato', sans-serif
@@ -347,36 +242,67 @@ a
 		font-weight: bold
 		letter-spacing: 4px
 		color: #fff
-		margin: 225px 0px 0 0
-		margin-left: 60px
+		margin: 225px 0 0 0
+		margin-left: 20%
 		text-transform: uppercase
 	&__header
 		font-family: 'Lora', serif
 		font-size: 42px
 		color: #fff
-		margin-left: 60px
+		margin-left: 20%
 		max-width: 613px
 	.header__button
 		margin-bottom: 130px
-		margin-left: 60px
+		margin-left: 20%
 	&__arrow
-		width: 17px
-		height: 31px
-		background: transparent url('../img/headerV3__arrow.svg') no-repeat
+		font-size: 0px
+		line-height: 0
+		background: transparent
 		border: none
-		display: inline-block
+		width: 80px
+		height: 80px
+		border-radius: 100%
+		background: rgba(0,0,0,.8)
 		outline: none
+		position: relative
+		cursor: pointer
+		position: absolute
+		z-index: 99999
+		top: 60%
 		cursor: pointer
 		opacity: .7
 		transition: opacity .2s
+		&::before
+			content: ''
+			display: block
+			width: 30px
+			height: 30px
+			border-left: solid 1px #fff
+			border-bottom: solid 1px #fff
+			position: absolute
+			top: 50%
+			left: 50%
 		&:hover
-			opacity: 1
+			background: rgba(255,255,255,.8)
+			&::before
+				border-color: #000
 		&-prev
-			transform: rotate(180deg)
-			margin-right: 40px
+			left: 10px
+			&::before
+				transform: translate(-30%, -50%) rotate(45deg)
+			@media (max-width: 1300px)
+			       left: 20px
+			// transform: rotate(180deg)
+		&-next
+			right: 10px
+			&::before
+				transform: translate(-70%, -50%) rotate(-135deg)
+			@media (max-width: 1300px)
+			       right: 20px
+
 	&__arrows
-		float: left
-		width: 30%
+		float: center
+		width: 50%
 	&__dots
 		float: left
 		width: 70%
@@ -400,358 +326,6 @@ a
 	.slick-active
 		button
 			opacity: 1
-
-.headerV4
-	overflow: hidden
-	background: #171718 url('../img/header-bg8.png') center no-repeat
-	background-size: cover
-	padding: 60px 0
-	&-bg2
-		background: #171718 url('../img/header-bg9.png') center no-repeat
-		background-size: cover
-	&__header
-		max-width: 613px
-		font-family: 'Lora', serif
-		color: #fff
-		font-size: 42px
-		margin-top: 290px
-	&__links
-		margin-top: 110px
-	&__links-left
-		float: left
-		width: 50%
-		.headerV4__link
-			margin-right: 30px
-	&__links-right
-		float: left
-		width: 50%
-		text-align: right
-	&__link
-		font-family: 'Lato', sans-serif
-		font-size: 16px
-		color: #c4beb6
-		text-decoration: none
-		transition: color .2s
-		&-white
-			color: #fff
-		&:hover
-			color: #ffcd44
-.headerV5
-	overflow: hidden
-	background: transparent url('../img/header-bg10.png') center no-repeat
-	background-size: cover
-	padding-top: 60px
-	padding-bottom: 90px
-	color: #fff
-	&__content
-		float: left
-		width: 50%
-		margin-top: 400px
-	&__header
-		font-family: 'Lora', serif
-		font-size: 60px
-		color: #fff
-		margin: 0
-	&__desc
-		font-family: 'Lato', sans-serif
-		font-size: 11px
-		font-weight: bold
-		letter-spacing: 6px
-		color: #fff
-		text-transform: uppercase
-		margin: 0
-	&__link
-		font-family: 'Lato', sans-serif
-		font-size: 13px
-		font-weight: bold
-		letter-spacing: 2px
-		color: #fff
-		margin-right: 40px
-		text-transform: uppercase
-		text-decoration: none
-		display: inline-block
-		margin-top: 80px
-		transition: color .2s
-		&:hover
-			color: #ffcd44
-	&__text
-		padding-left: 10px
-		line-height: 34px
-		font-family: 'Lato', sans-serif
-		font-size: 24px
-		color: #fff
-		margin: 0
-		font-weight: 300
-.headerV6
-	overflow: hidden
-	background: transparent url('../img/header-bg11.png') center no-repeat
-	background-size: cover
-	padding-top: 60px
-	padding-bottom: 90px
-	&-bg2
-		background: transparent url('../img/header-bg13.png') center no-repeat
-		background-size: cover
-	&__header
-		max-width: 647px
-		font-family: 'Lora', serif
-		font-size: 42px
-		color: #fff
-		margin: 300px 0 0 0
-	&__link
-		font-family: 'Lato', sans-serif
-		font-size: 13px
-		font-weight: bold
-		letter-spacing: 2px
-		color: #ffcd44
-		display: inline-block
-		margin-right: 40px
-		margin-top: 60px
-		text-transform: uppercase
-		text-decoration: none
-		transition: color .2s
-		&:hover
-			color: #fff
-.headerV7
-	overflow: hidden
-	background: transparent url('../img/header-bg14.png') center bottom no-repeat
-	background-size: cover
-	padding-top: 60px
-	&__header
-		font-family: 'Lora', serif
-		font-size: 42px
-		text-align: center
-		color: #fff
-		margin: 200px 0 0 0
-	.header__button
-		margin: 60px 0 260px 0
-.headerV8
-	overflow: hidden
-	background: transparent url('../img/header-bg7.png') center bottom no-repeat
-	background-size: cover
-	padding-top: 60px
-	padding-bottom: 90px
-	&__header
-		font-family: 'Lora', serif
-		font-size: 42px
-		color: #fff
-		margin: 10px 0 0 0
-	&__icon
-		margin-top: 56px
-		max-width: 50px
-		max-height: 50px
-		display: inline-block
-	&__items
-		margin-top: 115px
-	&__item
-		float: left
-		width: 33.3333333333%
-		padding-left: 50px
-		outline: none
-	&__item__icon
-		max-width: 50px
-		max-height: 50px
-	&__item__name
-		font-family: 'Lato', sans-serif
-		font-size: 15px
-		letter-spacing: 4px
-		color: #fff
-		text-transform: uppercase
-		max-width: 220px
-		margin: 25px 0 10px 0
-	&__item__text
-		opacity: 0.7
-		font-family: 'Lato', sans-serif
-		font-size: 15px
-		letter-spacing: 0.5px
-		color: #fff
-		max-width: 220px
-		margin: 0
-.headerV9
-	overflow: hidden
-	background: transparent url('../img/header-bg16.png') center bottom no-repeat
-	background-size: cover
-	padding-top: 60px
-	padding-bottom: 90px
-	&__header
-		margin: 50px 0 0 0
-		text-align: center
-		font-family: 'Lato', sans-serif
-		font-size: 80px
-		font-weight: 900
-		color: #ffcd44
-	&__text
-		margin: 10px 0 0 0
-		text-align: center
-		font-family: 'Lora', serif
-		font-size: 26px
-		color: #fff
-	&__iconBody
-		text-align: center
-		margin-top: 60px
-	.headerV8__items
-		margin-top: 90px
-	&__icon__svg
-		transition: fill .2s
-	&__icon:hover &__icon__svg
-		fill: #6573ff
-.headerV10
-	overflow: hidden
-	background: #121212
-	padding-top: 60px
-	padding-bottom: 90px
-	color: #fff
-	font-family: 'Lato', sans-serif
-	&__header
-		margin: 140px 0 0 0
-		line-height: 51px
-		font-size: 32px
-	&__text
-		margin: 60px 0 0 0
-		font-size: 24px
-		line-height: 37px
-	&__link
-		color: #ffcd44
-		text-decoration: none
-		transition: color .2s
-		&:hover
-			color: #6573ff
-	&__icon
-		display: block
-		text-decoration: none
-		color: #fff
-		font-family: LucidaGrande
-		font-size: 24px
-		margin-top: 155px
-		transition: transform .2s
-		&:hover
-			transform: translateY(5px)
-.headerV11
-	overflow: hidden
-	background: #6573ff
-	padding-top: 60px
-	padding-bottom: 90px
-	&__contentLeft
-		float: left
-		width: 67%
-		margin-top: 80px
-	&__contentRight
-		float: left
-		width: 33%
-		margin-top: 80px
-	&__header
-		margin: 90px 0 0 0
-		font-family: 'Lato', sans-serif
-		font-size: 50px
-		font-weight: 300
-		color: #fff
-		max-width: 555px
-	&__form
-		position: relative
-		max-width: 360px
-		font-family: 'Lato', sans-serif
-		margin-top: 70px
-		&__input
-			border: none
-			line-height: 60px
-			width: 100%
-			border-radius: 8px
-			background: #5562e7
-			outline: none
-			font-size: 14px
-			letter-spacing: 1.1px
-			color: #fff
-			padding: 0 20px
-		&__button
-			position: absolute
-			right: 20px
-			top: 20px
-			background: none
-			border: none
-			font-size: 13px
-			font-weight: bold
-			letter-spacing: 1px
-			color: #fff
-			text-transform: uppercase
-			outline: none
-			cursor: pointer
-			transition: color .2s
-			&:hover
-				color: #ffcd44
-	&__imgBody
-		width: 100%
-		max-width: 240px
-		text-align: center
-		&__link
-			color: #fff
-			font-family: 'Lato', sans-serif
-			font-size: 16px
-			text-decoration: none
-			display: inline-block
-			position: relative
-			padding-right: 30px
-			margin-top: 30px
-			&::before, &::after
-				display: block
-				content: ''
-				position: absolute
-				right: 0
-				top: 0
-				z-index: 9999
-				transition: transform .2s
-			&::before
-				width: 18px
-				height: 1px
-				background: #fff
-				right: 0
-				top: 10px
-			&::after
-				width: 5px
-				height: 5px
-				border-right: solid 1px #fff
-				border-bottom: solid 1px #fff
-				transform: rotate(-45deg)
-				right: 0
-				top: 8px
-			&:hover::after
-				transform: translateX(5px) rotate(-45deg)
-			&:hover::before
-				transform: translateX(5px)
-	&__img
-		width: 100%
-
-.headerV12
-	padding-top: 60px
-	.container
-		padding-bottom: 120px
-		border-bottom: solid 1px #d8d8d8
-	.header__logo
-		color: #1b161a
-	.header__link
-		color: #74767f
-		&:hover
-			color: #ffcd44
-	.header__menuIcon
-		&__topLine
-			background: #74767f
-		&__midleLine
-			background: #74767f
-		&__bottomLine
-			background: #74767f
-	&__header
-		font-size: 39px
-		color: #1a1b1e
-		text-align: center
-		font-family: 'Lora', serif
-		max-width: 628px
-		margin: 194px auto 20px auto
-	&__text
-		font-size: 19px
-		line-height: 28px
-		color: #8a919a
-		font-family: 'Lato', sans-serif
-		max-width: 628px
-		margin: 0 auto
-		text-align: center
 
 /*********************/
 /****CONTENT BLOCK****/

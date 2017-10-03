@@ -67,7 +67,8 @@ $(function(){
 	});
 	// HEADER 7
 	$('.headerV3__slider').slick({
-		arrows: false,
+		arrows: false, //next previous buttons
+	        //centerMode: true //fun
 		dots: true,
 		appendDots: $('.headerV3__dots'),
 		fade: true,
